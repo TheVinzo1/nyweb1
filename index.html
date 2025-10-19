@@ -1,228 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NY Studios - Professional Video Editing & Content Creation</title>
-    
-    <!-- Dependencies from carousel.html -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css"/>
-    <link rel="stylesheet" href="css/header.css"/>
-    <link rel="stylesheet" href="css/hero.css"/>
-    <link rel="stylesheet" href="css/carousels.css"/>
-    <link rel="stylesheet" href="css/sections.css"/>
-    <link rel="stylesheet" href="trusted-brands/css/trusted-brands.css"/>
 
-</head>
-<body>
-    <svg width="0" height="0" style="position:absolute">
-        <filter id="water-ripple">
-            <feTurbulence type="fractalNoise" baseFrequency="0.01 0.015" numOctaves="1" seed="2" result="turbulence">
-                <animate attributeName="baseFrequency" dur="10s" values="0.01 0.015;0.015 0.02;0.01 0.015" repeatCount="indefinite"></animate>
-            </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-        </filter>
-        <filter id="water-ripple-strong">
-            <feTurbulence type="fractalNoise" baseFrequency="0.02 0.03" numOctaves="1" seed="3" result="turbulence">
-                <animate attributeName="baseFrequency" dur="8s" values="0.02 0.03;0.04 0.05;0.02 0.03" repeatCount="indefinite"></animate>
-            </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="25" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-        </filter>
+    <!-- Dependencies from carousel.html -->
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/carousels.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="trusted-brands/css/trusted-brands.css" />
+  </head>
+
+  <body>
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="water-ripple">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.01 0.015"
+          numOctaves="1"
+          seed="2"
+          result="turbulence"
+        >
+          <animate
+            attributeName="baseFrequency"
+            dur="10s"
+            values="0.01 0.015;0.015 0.02;0.01 0.015"
+            repeatCount="indefinite"
+          ></animate>
+        </feTurbulence>
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="turbulence"
+          scale="5"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        ></feDisplacementMap>
+      </filter>
+      <filter id="water-ripple-strong">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.02 0.03"
+          numOctaves="1"
+          seed="3"
+          result="turbulence"
+        >
+          <animate
+            attributeName="baseFrequency"
+            dur="8s"
+            values="0.02 0.03;0.04 0.05;0.02 0.03"
+            repeatCount="indefinite"
+          ></animate>
+        </feTurbulence>
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="turbulence"
+          scale="25"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        ></feDisplacementMap>
+      </filter>
     </svg>
-    <div class="poison-water" id="poisonWater"><div class="water-layer" id="waterLayer"></div></div>
-    
+    <div class="poison-water" id="poisonWater">
+      <div class="water-layer" id="waterLayer"></div>
+    </div>
+
     <header class="header">
-        <div class="container">
-            <div class="flex items-center justify-between py-4">
-            <a href="#" id="site-logo-link" class="flex items-center gap-2">
-                    <!-- This content will be replaced by script.js -->
-                    <div class="text-2xl font-bold text-primary">NY Studios</div>
-                </a>
-                <nav id="main-nav" class="hidden md:flex items-center gap-2">
-                    <!-- Navigation links will be populated by script.js -->
-                </nav>
-                <div class="flex items-center gap-2">
-                     <a href="#contact" class="btn btn-studio btn-sm hidden md:inline-flex">Contact Us</a>
-                     <button id="hamburger-btn" class="btn btn-ghost md:hidden">
-                        <i class="fas fa-bars text-xl"></i>
-                     </button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="flex items-center justify-between py-4">
+          <a href="#" id="site-logo-link" class="flex items-center gap-2">
+            <!-- This content will be replaced by script.js -->
+            <div class="text-2xl font-bold text-primary">NY Studios</div>
+          </a>
+          <nav id="main-nav" class="hidden md:flex items-center gap-2">
+            <!-- Navigation links will be populated by script.js -->
+          </nav>
+          <div class="flex items-center gap-2">
+            <a
+              href="#contact"
+              class="btn btn-studio btn-sm hidden md:inline-flex"
+              >Contact Us</a
+            >
+            <button id="hamburger-btn" class="btn btn-ghost md:hidden">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
+      </div>
     </header>
     <div id="mobile-menu" class="mobile-nav">
-        <!-- Mobile navigation links will be populated by script.js -->
+      <!-- Mobile navigation links will be populated by script.js -->
     </div>
 
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="text-center">
-                <h1 class="text-6xl font-bold mb-6 animate-fade-in">
-                    <span id="hero-title"></span>
-                    <span id="hero-subtitle" class="text-primary block mt-2"></span>
-                </h1>
-                <p id="hero-description" class="text-xl text-muted mb-8 animate-fade-in" style="animation-delay: 0.2s;"></p>
-                
-                <div class="mb-8 animate-fade-in" style="animation-delay: 0.3s;">
-                    <p class="text-muted text-center mb-4">THE TOOLS WE MASTER</p>
-                    <div id="tools-container" class="badges"></div>
-                </div>
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="text-center">
+          <h1 class="text-6xl font-bold mb-6 animate-fade-in">
+            <span id="hero-title"></span>
+            <span id="hero-subtitle" class="text-primary block mt-2"></span>
+          </h1>
+          <p
+            id="hero-description"
+            class="text-xl text-muted mb-8 animate-fade-in"
+            style="animation-delay: 0.2s"
+          ></p>
 
-                <div id="stats-bar" class="stats-bar animate-fade-in" style="animation-delay: 0.4s;">
-                    <!-- Stats will be populated by script.js -->
-                </div>
+          <div class="mb-8 animate-fade-in" style="animation-delay: 0.3s">
+            <p class="text-muted text-center mb-4">THE TOOLS WE MASTER</p>
+            <div id="tools-container" class="badges"></div>
+          </div>
 
-                <div class="flex gap-4 justify-center animate-fade-in" style="animation-delay: 0.4s;">
-                    <a id="view-work-btn" href="#services" class="btn btn-hero btn-lg" style="margin: 12px 0;"><span class="icon">▶</span> View Our Work</a>
-                </div>
+          <div
+            id="stats-bar"
+            class="stats-bar animate-fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <!-- Stats will be populated by script.js -->
+          </div>
 
-                <div class="trusted-brands animate-fade-in" style="animation-delay: 0.5s;">
-                    <h3 class="trusted-title">I worked with :</h3>
-                    <div class="brands-marquee">
-                        <div id="brands-container" class="brands-container">
-                            <!-- Brands will be populated by script.js -->
-                        </div>
-                    </div>
-                </div>
+          <div
+            class="flex gap-4 justify-center animate-fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <a
+              id="view-work-btn"
+              href="#services"
+              class="btn btn-hero btn-lg"
+              style="margin: 12px 0"
+              ><span class="icon">▶</span> View Our Work</a
+            >
+          </div>
+
+          <div
+            class="trusted-brands animate-fade-in"
+            style="animation-delay: 0.5s"
+          >
+            <h3 class="trusted-title">I worked with :</h3>
+            <div class="brands-marquee">
+              <div id="brands-container" class="brands-container">
+                <!-- Brands will be populated by script.js -->
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="services" class="py-20" style="background-color: hsl(var(--card));">
-        <div class="container">
-            <div class="text-center mb-16"><h2 class="text-5xl font-bold mb-6">Video Editing Samples</h2><p class="text-xl text-muted">Check out our professional video editing samples across various categories</p></div>
-
-            <div class="flex justify-center gap-4 mb-8" style="flex-wrap: wrap;">
-                <button class="btn btn-studio btn-sm category-btn hover-scale" data-category="Documentary">Documentary</button>
-                <button class="btn btn-studio btn-sm category-btn hover-scale" data-category="Gaming">Gaming</button>
-                    <button class="btn btn-studio btn-sm category-btn hover-scale" data-category="Others">Others</button>
-            </div>
-            
-            <div id="videoCarousel" class="hidden animate-slide-down">
-                <div class="video-display p-6 mb-8">
-                    <div class="flex items-center justify-between mb-6">
-                        <div><h3 class="text-3xl font-bold text-primary mb-2" id="categoryTitle"></h3><p class="text-muted">Professional video editing samples</p></div>
-                        <button class="btn btn-ghost" id="closeCarousel"><span class="icon">✕</span></button>
-                    </div>
-
-                    <div class="carousel">
-                      <div class="carousel__body">
-                        <div class="carousel__prev"><i class="fas fa-angle-left"></i></div>
-                        <div class="carousel__next"><i class="fas fa-angle-right"></i></div>
-                        <div class="carousel__slider">
-                           <!-- 3D Carousel items will be populated here -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="text-center" style="margin-top: -20px;"><button class="btn btn-studio btn-sm" id="closeCarouselBottom">Close Gallery</button></div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-3 gap-8 mb-20"></div>
+    <section
+      id="services"
+      class="py-20"
+      style="background-color: hsl(var(--card))"
+    >
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold mb-6">Video Editing Samples</h2>
+          <p class="text-xl text-muted">
+            Check out our professional video editing samples across various
+            categories
+          </p>
         </div>
+
+        <div class="flex justify-center gap-4 mb-8" style="flex-wrap: wrap">
+          <button
+            class="btn btn-studio btn-sm category-btn hover-scale"
+            data-category="Documentary"
+          >
+            Documentary
+          </button>
+          <button
+            class="btn btn-studio btn-sm category-btn hover-scale"
+            data-category="Gaming"
+          >
+            Gaming
+          </button>
+          <button
+            class="btn btn-studio btn-sm category-btn hover-scale"
+            data-category="Others"
+          >
+            Others
+          </button>
+        </div>
+
+        <div id="videoCarousel" class="hidden animate-slide-down">
+          <div class="video-display p-6 mb-8">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <h3
+                  class="text-3xl font-bold text-primary mb-2"
+                  id="categoryTitle"
+                ></h3>
+                <p class="text-muted">Professional video editing samples</p>
+              </div>
+              <button class="btn btn-ghost" id="closeCarousel">
+                <span class="icon">✕</span>
+              </button>
+            </div>
+
+            <div class="carousel">
+              <div class="carousel__body">
+                <div class="carousel__prev">
+                  <i class="fas fa-angle-left"></i>
+                </div>
+                <div class="carousel__next">
+                  <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="carousel__slider">
+                  <!-- 3D Carousel items will be populated here -->
+                </div>
+              </div>
+            </div>
+            <div class="text-center" style="margin-top: -20px">
+              <button class="btn btn-studio btn-sm" id="closeCarouselBottom">
+                Close Gallery
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8 mb-20"></div>
+      </div>
     </section>
 
     <section class="section">
-        <div class="container">
-            <h3 style="text-align: center; margin: 80px 0 30px; font-size: 32px;">Short Form Content</h3>
-            <div class="carousel-container" id="shortFormCarouselContainer">
-                <div class="carousel__body">
-                    <div class="carousel__prev"><i class="fas fa-angle-left"></i></div>
-                    <div class="carousel__next"><i class="fas fa-angle-right"></i></div>
-                    <div class="carousel__slider" id="shortFormSlider">
-                        <!-- Short form videos will be populated by script.js -->
-                    </div>
-                </div>
+      <div class="container">
+        <h3 style="text-align: center; margin: 80px 0 30px; font-size: 32px">
+          Short Form Content
+        </h3>
+        <div class="carousel-container" id="shortFormCarouselContainer">
+          <div class="carousel__body">
+            <div class="carousel__prev"><i class="fas fa-angle-left"></i></div>
+            <div class="carousel__next"><i class="fas fa-angle-right"></i></div>
+            <div class="carousel__slider" id="shortFormSlider">
+              <!-- Short form videos will be populated by script.js -->
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="graphics" class="artwork-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Graphics and Thumbnails</h2>
-                <p class="section-subtitle">Browse through some of our best graphics and thumbnails created for various clients.</p>
-                <div class="filter-buttons">
-                    <button class="filter-btn" data-filter="thumbnails">Thumbnails</button>
-                </div>
-            </div>
-            
-            <div id="artwork-grid" class="artwork-grid">
-                <!-- Artwork cards will be populated by script.js -->
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Graphics and Thumbnails</h2>
+          <p class="section-subtitle">
+            Browse through some of our best graphics and thumbnails created for
+            various clients.
+          </p>
+          <div class="filter-buttons">
+            <button class="filter-btn" data-filter="thumbnails">
+              Thumbnails
+            </button>
+          </div>
         </div>
+
+        <div id="artwork-grid" class="artwork-grid">
+          <!-- Artwork cards will be populated by script.js -->
+        </div>
+      </div>
     </section>
 
     <section id="reviews" class="section reviews-section">
-        <div class="container">
-            <div class="review-header"><div class="eyebrow-text">Testimonials</div><h2>Don't take our word for it</h2><p>Here's what our clients have to say</p></div>
-            <div class="testimonial-carousel-wrapper">
-                <div id="testimonial-carousel" class="testimonial-carousel">
-                    <!-- Testimonials will be populated by script.js -->
-                </div>
-                <div class="testimonial-scrollbar">
-                    <input id="testimonialRange" type="range" min="0" max="100" value="0" step="1" />
-                </div>
-            </div>
+      <div class="container">
+        <div class="review-header">
+          <div class="eyebrow-text">Testimonials</div>
+          <h2>Don't take our word for it</h2>
+          <p>Here's what our clients have to say</p>
         </div>
+        <div class="testimonial-carousel-wrapper">
+          <div id="testimonial-carousel" class="testimonial-carousel">
+            <!-- Testimonials will be populated by script.js -->
+          </div>
+          <div class="testimonial-scrollbar">
+            <input
+              id="testimonialRange"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              step="1"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="faq" class="section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div id="faq-container" class="faq-container">
-                <!-- FAQ items will be populated by script.js -->
-            </div>
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div id="faq-container" class="faq-container">
+          <!-- FAQ items will be populated by script.js -->
         </div>
+      </div>
     </section>
 
-    <section id="why-us" class="section" style="background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--background))); padding: 5rem 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 id="whyus-title" class="section-title"></h2>
-                <p id="whyus-subtitle" class="section-subtitle"></p>
-            </div>
-            <div id="whyus-boxes" class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem;">
-                <!-- Why Us boxes will be populated by script.js -->
-            </div>
+    <section
+      id="why-us"
+      class="section"
+      style="
+        background: linear-gradient(
+          135deg,
+          hsl(var(--card)),
+          hsl(var(--background))
+        );
+        padding: 5rem 0;
+      "
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2 id="whyus-title" class="section-title"></h2>
+          <p id="whyus-subtitle" class="section-subtitle"></p>
         </div>
+        <div
+          id="whyus-boxes"
+          class="grid"
+          style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem"
+        >
+          <!-- Why Us boxes will be populated by script.js -->
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact-section-wrapper">
-        <div class="container">
-            <div class="contact-section">
-                <div class="contact-header">
-                    <h2>Let's Get Started</h2>
-                    <p class="contact-subtitle">We're Not Just Editors, We're Your Creative Partners! Have something in mind? We're here to make it happen!</p>
+      <div class="container">
+        <div class="contact-section">
+          <div class="contact-header">
+            <h2>Let's Get Started</h2>
+            <p class="contact-subtitle">
+              We're Not Just Editors, We're Your Creative Partners! Have
+              something in mind? We're here to make it happen!
+            </p>
+          </div>
+          <div class="contact-content">
+            <div class="founder-info">
+              <div id="founder-avatar" class="founder-avatar">L</div>
+              <div>
+                <div class="founder-details">
+                  <h3 id="founder-name"></h3>
+                  <p id="founder-role" class="role"></p>
                 </div>
-                <div class="contact-content">
-                    <div class="founder-info">
-                        <div id="founder-avatar" class="founder-avatar">L</div>
-                        <div>
-                            <div class="founder-details">
-                                <h3 id="founder-name"></h3>
-                                <p id="founder-role" class="role"></p>
-                            </div>
-                            <p id="founder-bio" class="founder-bio"></p>
-                        </div>
-                    </div>
-                    <div id="social-links" class="social-links">
-                        <!-- Social links will be populated by script.js -->
-                    </div>
-                </div>
-                <div class="footer">
-                    <div class="footer-content">
-                        <a id="footer-logo-link" class="logo" href="#" target="_blank" rel="noopener">
-                            <img id="footer-logo-img" alt="NY Studios logo" />
-                        </a>
-                        <span>NY Studios</span><span>•</span><span id="footer-year"></span>
-                    </div>
-                </div>
+                <p id="founder-bio" class="founder-bio"></p>
+              </div>
             </div>
+            <div id="social-links" class="social-links">
+              <!-- Social links will be populated by script.js -->
+            </div>
+          </div>
+          <div class="footer">
+            <div class="footer-content">
+              <a
+                id="footer-logo-link"
+                class="logo"
+                href="#"
+                target="_blank"
+                rel="noopener"
+              >
+                <img id="footer-logo-img" alt="NY Studios logo" />
+              </a>
+              <span>NY Studios</span><span>•</span
+              ><span id="footer-year"></span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <script src="js/theme.js"></script>
@@ -232,5 +383,5 @@
     <script src="js/interactions.js"></script>
     <script src="js/initialize.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

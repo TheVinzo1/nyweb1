@@ -408,9 +408,7 @@
       "category": "Others",
       "src": "https://www.youtube.com/embed/ej-XP3oO-TA"
     },
-    { "category": "Others",
-      "src": "https://www.youtube.com/embed/9UX5DlHzaBM" 
-    }
+    { "category": "Others", "src": "https://www.youtube.com/embed/9UX5DlHzaBM" }
   ],
   "whyUs": {
     "title": "Why Choose Us?",
@@ -691,37 +689,37 @@
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/sample39.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/sample39_preview.jpg"
-    }
+    },
     {
       "title": "Client Thumbnail 40",
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/oct1.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/oct1_preview.jpg"
-    }
+    },
     {
       "title": "Client Thumbnail 41",
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/oct2.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/oct2_preview.jpg"
-    }
+    },
     {
       "title": "Client Thumbnail 42",
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/oct3.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/oct3_preview.jpg"
-    }
+    },
     {
       "title": "Client Thumbnail 43",
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/oct4.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/oct4_preview.jpg"
-    }
+    },
     {
       "title": "Client Thumbnail 44",
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/oct5.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/oct5_preview.jpg"
-    }
+    },
     {
       "title": "Client Thumbnail 45",
       "category": "thumbnails",

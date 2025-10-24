@@ -439,6 +439,9 @@
     ]
   },
   "shortFormData": [
+    { "src": "https://youtube.com/embed/o79IAPXy1p0?si=RHBec6iB8IwUUYkq" },
+    { "src": "https://youtube.com/embed/4IrIsykjupE?si=wsJZFMGOo9iH01mj" },
+    { "src": "https://youtube.com/embed/yHKz5cZKZoI?si=OFZJhjDnzWguBSS2" },
     { "src": "https://youtube.com/embed/D2Be1XgsJLI?feature=share" },
     { "src": "https://youtube.com/embed/QHcJsMO60oI?feature=share" },
     { "src": "https://youtube.com/embed/izgNw8-zEDc?feature=share" },
@@ -686,6 +689,42 @@
       "category": "thumbnails",
       "imageUrl": "https://cdn.nystudios.org/thumbnails/sample39.jpg",
       "previewUrl": "https://cdn.nystudios.org/thumbnails/sample39_preview.jpg"
+    }
+    {
+      "title": "Client Thumbnail 40",
+      "category": "thumbnails",
+      "imageUrl": "https://cdn.nystudios.org/thumbnails/oct1.jpg",
+      "previewUrl": "https://cdn.nystudios.org/thumbnails/oct1_preview.jpg"
+    }
+    {
+      "title": "Client Thumbnail 41",
+      "category": "thumbnails",
+      "imageUrl": "https://cdn.nystudios.org/thumbnails/oct2.jpg",
+      "previewUrl": "https://cdn.nystudios.org/thumbnails/oct2_preview.jpg"
+    }
+    {
+      "title": "Client Thumbnail 42",
+      "category": "thumbnails",
+      "imageUrl": "https://cdn.nystudios.org/thumbnails/oct3.jpg",
+      "previewUrl": "https://cdn.nystudios.org/thumbnails/oct3_preview.jpg"
+    }
+    {
+      "title": "Client Thumbnail 43",
+      "category": "thumbnails",
+      "imageUrl": "https://cdn.nystudios.org/thumbnails/oct4.jpg",
+      "previewUrl": "https://cdn.nystudios.org/thumbnails/oct4_preview.jpg"
+    }
+    {
+      "title": "Client Thumbnail 44",
+      "category": "thumbnails",
+      "imageUrl": "https://cdn.nystudios.org/thumbnails/oct5.jpg",
+      "previewUrl": "https://cdn.nystudios.org/thumbnails/oct5_preview.jpg"
+    }
+    {
+      "title": "Client Thumbnail 45",
+      "category": "thumbnails",
+      "imageUrl": "https://cdn.nystudios.org/thumbnails/oct6.jpg",
+      "previewUrl": "https://cdn.nystudios.org/thumbnails/oct6_preview.jpg"
     }
   ],
   "testimonials": [

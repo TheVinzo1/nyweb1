@@ -86,6 +86,12 @@
     ],
     "trustedBrands": [
       {
+        "name": "TrunksPlays",
+        "logoUrl": "https://cdn.nystudios.org/trusted-brands/trunksplays.jpg",
+        "ytUrl": "https://www.youtube.com/@ClassifiedSpongeAI",
+        "subs": "239K Subs"
+      },
+      {
         "name": "Classified Sponge",
         "logoUrl": "https://cdn.nystudios.org/trusted-brands/classified-sponge.jpg",
         "ytUrl": "https://www.youtube.com/@ClassifiedSpongeAI",

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -158,6 +158,12 @@
           </div>
 
           <div
+            id="hero-video-container"
+            class="hero-video-container animate-fade-in hidden"
+            style="animation-delay: 0.35s"
+          ></div>
+
+          <div
             id="stats-bar"
             class="stats-bar animate-fade-in"
             style="animation-delay: 0.4s"
@@ -189,6 +195,18 @@
               </div>
             </div>
           </div>
+
+          <div
+            class="creators-section animate-fade-in"
+            style="animation-delay: 0.6s"
+          >
+            <h3 class="trusted-title mb-6" style="margin-top: 4rem">
+              Creators We're Proud To Team Up With
+            </h3>
+            <div id="creators-grid" class="creators-grid">
+              <!-- Creators will be populated by script.js -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -205,63 +223,43 @@
             Check out our professional video editing samples across various
             categories
           </p>
-        </div>
-
-        <div class="flex justify-center gap-4 mb-8" style="flex-wrap: wrap">
-          <button
-            class="btn btn-studio btn-sm category-btn hover-scale"
-            data-category="Documentary"
-          >
-            Documentary
-          </button>
-          <button
-            class="btn btn-studio btn-sm category-btn hover-scale"
-            data-category="Gaming"
-          >
-            Gaming
-          </button>
-          <button
-            class="btn btn-studio btn-sm category-btn hover-scale"
-            data-category="Others"
-          >
-            Others
-          </button>
-        </div>
-
-        <div id="videoCarousel" class="hidden animate-slide-down">
-          <div class="video-display p-6 mb-8">
-            <div class="flex items-center justify-between mb-6">
-              <div>
-                <h3
-                  class="text-3xl font-bold text-primary mb-2"
-                  id="categoryTitle"
-                ></h3>
-                <p class="text-muted">Professional video editing samples</p>
-              </div>
-              <button class="btn btn-ghost" id="closeCarousel">
-                <span class="icon">✕</span>
-              </button>
-            </div>
-
-            <div class="carousel">
-              <div class="carousel__body">
-                <div class="carousel__prev">
-                  <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="carousel__next">
-                  <i class="fas fa-angle-right"></i>
-                </div>
-                <div class="carousel__slider">
-                  <!-- 3D Carousel items will be populated here -->
-                </div>
-              </div>
-            </div>
-            <div class="text-center" style="margin-top: -20px">
-              <button class="btn btn-studio btn-sm" id="closeCarouselBottom">
-                Close Gallery
-              </button>
-            </div>
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 class="highlight-title">Long Form Content</h3>
+            <div class="highlight-marker"></div>
           </div>
+        </div>
+
+        <div
+          class="flex justify-center gap-4 mb-8"
+          style="flex-wrap: wrap"
+          id="long-form-tabs"
+        >
+          <!-- Long form tabs will be populated by script.js -->
+        </div>
+
+        <div
+          id="videoSliderContainer"
+          class="video-slider-container animate-fade-in hidden"
+        >
+          <button
+            class="slider-nav-btn prev-btn"
+            id="sliderPrevBtn"
+            aria-label="Previous"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div id="videoSlider" class="video-slider">
+            <!-- Videos will be populated here -->
+          </div>
+
+          <button
+            class="slider-nav-btn next-btn"
+            id="sliderNextBtn"
+            aria-label="Next"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
 
         <div class="grid grid-cols-3 gap-8 mb-20"></div>
@@ -270,38 +268,200 @@
 
     <section class="section">
       <div class="container">
-        <h3 style="text-align: center; margin: 80px 0 30px; font-size: 32px">
-          Short Form Content
-        </h3>
-        <div class="carousel-container" id="shortFormCarouselContainer">
-          <div class="carousel__body">
-            <div class="carousel__prev"><i class="fas fa-angle-left"></i></div>
-            <div class="carousel__next"><i class="fas fa-angle-right"></i></div>
-            <div class="carousel__slider" id="shortFormSlider">
-              <!-- Short form videos will be populated by script.js -->
-            </div>
+        <div class="text-center mb-12 mt-12">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 class="highlight-title">Short Form Content</h3>
+            <div class="highlight-marker"></div>
           </div>
+        </div>
+
+        <div
+          class="flex justify-center gap-4 mb-8"
+          style="flex-wrap: wrap"
+          id="short-form-tabs"
+        >
+          <!-- Short form tabs will be populated by script.js -->
+        </div>
+
+        <div
+          id="shortVideoSliderContainer"
+          class="video-slider-container animate-fade-in hidden"
+        >
+          <button
+            class="slider-nav-btn prev-btn"
+            id="shortSliderPrevBtn"
+            aria-label="Previous"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div id="shortVideoSlider" class="video-slider">
+            <!-- Short form videos will be populated by script.js -->
+          </div>
+
+          <button
+            class="slider-nav-btn next-btn"
+            id="shortSliderNextBtn"
+            aria-label="Next"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
 
-    <section id="graphics" class="artwork-section">
+    <section
+      id="graphics"
+      class="section artwork-section"
+      style="padding-top: 5rem"
+    >
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Graphics and Thumbnails</h2>
-          <p class="section-subtitle">
+        <div class="text-center mb-12 mt-12">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 class="highlight-title">Graphics and Thumbnails</h3>
+            <div class="highlight-marker"></div>
+          </div>
+          <p class="text-xl text-muted mt-4">
             Browse through some of our best graphics and thumbnails created for
             various clients.
           </p>
-          <div class="filter-buttons">
-            <button class="filter-btn" data-filter="thumbnails">
-              Thumbnails
-            </button>
-          </div>
         </div>
 
-        <div id="artwork-grid" class="artwork-grid">
-          <!-- Artwork cards will be populated by script.js -->
+        <div
+          class="flex justify-center gap-4 mb-4 mt-4"
+          style="flex-wrap: wrap"
+          id="graphics-tabs"
+        >
+          <!-- Graphics tabs will be populated by script.js -->
+        </div>
+
+        <div
+          id="graphicsSliderContainer"
+          class="video-slider-container animate-fade-in hidden"
+        >
+          <button
+            class="slider-nav-btn prev-btn"
+            id="graphicsSliderPrevBtn"
+            aria-label="Previous"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div id="graphicsSlider" class="video-slider">
+            <!-- Graphics will be populated here -->
+          </div>
+
+          <button
+            class="slider-nav-btn next-btn"
+            id="graphicsSliderNextBtn"
+            aria-label="Next"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="scripting"
+      class="section artwork-section"
+      style="padding-top: 5rem"
+    >
+      <div class="container">
+        <div class="text-center mb-12 mt-12">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 class="highlight-title">Scripting Samples</h3>
+            <div class="highlight-marker"></div>
+          </div>
+          <p class="text-xl text-muted mt-4">
+            Check some of our recent works in scripting and storytelling
+          </p>
+        </div>
+
+        <div
+          class="flex justify-center gap-4 mb-8 mt-4"
+          style="flex-wrap: wrap"
+          id="scripting-tabs"
+        >
+          <!-- Scripting tabs will be populated by script.js -->
+        </div>
+
+        <div
+          id="scriptingSliderContainer"
+          class="video-slider-container animate-fade-in hidden"
+        >
+          <button
+            class="slider-nav-btn prev-btn"
+            id="scriptingSliderPrevBtn"
+            aria-label="Previous"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div id="scriptingSlider" class="video-slider">
+            <!-- Scripting videos will be populated by script.js -->
+          </div>
+
+          <button
+            class="slider-nav-btn next-btn"
+            id="scriptingSliderNextBtn"
+            aria-label="Next"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="success-stories" class="section">
+      <div class="container">
+        <div class="text-center mb-12 mt-12">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 class="highlight-title">Dont just Take Our Words</h3>
+            <div class="highlight-marker"></div>
+          </div>
+          <p class="text-xl text-muted mt-0 mb-4">See it for yourselfs</p>
+        </div>
+
+        <div id="success-stories-container">
+          <!-- Success stories will be populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <section id="client-wins" class="section">
+      <div class="container">
+        <div class="text-center mb-12 mt-12">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 class="highlight-title">More Of our Client Wins</h3>
+            <div class="highlight-marker"></div>
+          </div>
+          <p class="text-xl text-muted mt-0 mb-4">See it for yourselvs</p>
+        </div>
+
+        <div class="video-slider-container" id="clientWinsSliderContainer">
+          <div
+            id="clientWinsSlider"
+            class="video-slider"
+            style="align-items: center"
+          >
+            <!-- Client wins will be populated by script.js -->
+          </div>
+
+          <button
+            id="clientWinsPrevBtn"
+            class="slider-nav-btn prev-btn"
+            aria-label="Previous"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            id="clientWinsNextBtn"
+            class="slider-nav-btn next-btn"
+            aria-label="Next"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -310,8 +470,7 @@
       <div class="container">
         <div class="review-header">
           <div class="eyebrow-text">Testimonials</div>
-          <h2>Don't take our word for it</h2>
-          <p>Here's what our clients have to say</p>
+          <h2>Here's what our clients have to say</h2>
         </div>
         <div class="testimonial-carousel-wrapper">
           <div id="testimonial-carousel" class="testimonial-carousel">
@@ -340,34 +499,63 @@
       </div>
     </section>
 
-    <section
-      id="why-us"
-      class="section"
-      style="
-        background: linear-gradient(
-          135deg,
-          hsl(var(--card)),
-          hsl(var(--background))
-        );
-        padding: 5rem 0;
-      "
-    >
+    <section id="why-us" class="section">
       <div class="container">
-        <div class="section-header">
-          <h2 id="whyus-title" class="section-title"></h2>
-          <p id="whyus-subtitle" class="section-subtitle"></p>
+        <div class="text-center mb-12">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3 id="whyus-title" class="highlight-title"></h3>
+            <div class="highlight-marker"></div>
+          </div>
+          <p id="whyus-subtitle" class="text-xl text-muted mt-4"></p>
         </div>
-        <div
-          id="whyus-boxes"
-          class="grid"
-          style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem"
-        >
+
+        <div id="whyus-boxes">
           <!-- Why Us boxes will be populated by script.js -->
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section-wrapper">
+    <section id="team" class="section team-section">
+      <div class="container">
+        <div class="text-center mb-16" style="margin-bottom: 5rem">
+          <div class="highlight-title-container" style="display: inline-block">
+            <h3
+              class="highlight-title"
+              style="
+                font-size: 3rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+              "
+            >
+              Master minds behind the curtains
+            </h3>
+            <div
+              class="highlight-marker"
+              style="height: 1.2rem; bottom: 0.5rem; transform: skewX(-15deg)"
+            ></div>
+          </div>
+          <p
+            class="text-xl text-muted mt-4"
+            style="
+              font-size: 1.4rem;
+              letter-spacing: 4px;
+              text-transform: uppercase;
+              color: hsl(var(--primary));
+              font-weight: 600;
+              margin-top: 1.5rem;
+            "
+          >
+            Meet Our Team
+          </p>
+        </div>
+
+        <div id="team-container" class="team-container">
+          <!-- Team will be populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="contact" class="contact-section-wrapper">
       <div class="container">
         <div class="contact-section">
           <div class="contact-header">
@@ -389,27 +577,168 @@
               </div>
             </div>
             <div id="social-links" class="social-links">
-              <!-- Social links will be populated by script.js -->
-            </div>
-          </div>
-          <div class="footer">
-            <div class="footer-content">
-              <a
-                id="footer-logo-link"
-                class="logo"
-                href="#"
-                target="_blank"
-                rel="noopener"
-              >
-                <img id="footer-logo-img" alt="NY Studios logo" />
-              </a>
-              <span>NY Studios</span><span>•</span
-              ><span id="footer-year"></span>
+              Social links will be populated by script.js
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Column 1: Brand & CTA -->
+          <div class="footer-col brand-col">
+            <a href="#" id="footer-logo-link" class="footer-logo">
+              <img
+                id="footer-logo-img"
+                alt="NY Studios logo"
+                style="width: 32px; height: 32px; object-fit: contain"
+                src="https://cdn.nystudios.org/ny_3.png"
+              />
+              <span class="logo-text"
+                >NY <span class="accent-text">Studios</span></span
+              >
+            </a>
+            <p class="footer-pitch">
+              We turn raw footage into watchable, sharable, premium content that
+              actually performs.
+            </p>
+            <div class="footer-actions">
+              <a
+                href="#contact"
+                class="btn btn-outline"
+                style="
+                  border: 2px solid hsl(var(--primary));
+                  color: hsl(var(--primary));
+                  padding: 0.5rem 1rem;
+                  border-radius: 999px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  display: inline-block;
+                "
+                >Get Started</a
+              >
+              <a
+                href="#services"
+                class="btn btn-primary"
+                style="
+                  background: hsl(var(--primary));
+                  color: hsl(var(--primary-foreground));
+                  padding: 0.5rem 1rem;
+                  border-radius: 999px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  display: inline-block;
+                "
+                >View Work</a
+              >
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Our Work</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#why-us">Quality</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Legal -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Get in Touch -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Get in Touch</h4>
+            <ul class="footer-contact-links">
+              <li>
+                <a href="mailto:hire.nystudios@gmail.com"
+                  ><i class="fas fa-envelope" style="margin-right: 8px"></i>
+                  hire.nystudios@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="https://x.com/nystudios1" target="_blank"
+                  ><i class="fab fa-twitter" style="margin-right: 8px"></i>
+                  x.com/nystudios1</a
+                >
+              </li>
+              <li>
+                <a href="https://instagram.com/nystudios1_/" target="_blank"
+                  ><i class="fab fa-instagram" style="margin-right: 8px"></i>
+                  @nystudios1_</a
+                >
+              </li>
+              <li>
+                <a href="https://facebook.com/nystudios1" target="_blank"
+                  ><i class="fab fa-facebook" style="margin-right: 8px"></i>
+                  /nystudios1</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            &copy; <span id="footer-year">2026</span> NY Studios. All rights
+            reserved.
+          </div>
+          <div
+            class="footer-credit"
+            style="display: flex; align-items: center; gap: 8px"
+          >
+            <span
+              style="
+                color: hsl(var(--primary));
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 14px;
+              "
+              >&lt;/&gt;</span
+            >
+            <span style="display: flex; align-items: center; gap: 4px">
+              Crafted with
+              <svg
+                viewBox="0 0 24 24"
+                style="
+                  width: 14px;
+                  height: 14px;
+                  fill: none;
+                  stroke: hsl(var(--primary));
+                  stroke-width: 2;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  filter: drop-shadow(0 0 4px hsl(var(--primary) / 0.4));
+                "
+              >
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                />
+              </svg>
+              by
+              <a
+                href="https://github.com/siyamhosan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="accent-text"
+                style="text-decoration: none; font-weight: 600"
+                >ByteBender</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/theme.js"></script>
     <script src="trusted-brands/js/trusted-brands.js"></script>

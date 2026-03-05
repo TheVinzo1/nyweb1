@@ -86,73 +86,7 @@ class Navigation {
   }
 }
 
-// Artwork filter functionality
-class ArtworkFilter {
-  constructor() {
-    this.filterButtons = document.querySelectorAll(".filter-btn");
-    this.artworkGrid = document.getElementById("artwork-grid");
-    this.artworkCards = []; // Initialize as empty, will be populated dynamically
-    this.filterState = "hidden"; // possible states: hidden, thumbnails, graphics
-    this.currentFilter = "thumbnails";
-
-    this.init();
-  }
-
-  init() {
-    this.setupEventListeners();
-    this.artworkGrid.classList.add("hidden");
-  }
-
-  setupEventListeners() {
-    this.filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        if (this.filterState === "hidden") {
-          this.filterState = "thumbnails";
-          this.currentFilter = "thumbnails";
-          button.textContent = "Thumbnails";
-          this.filterArtwork(this.currentFilter);
-          this.artworkGrid.classList.remove("hidden");
-        } else if (this.filterState === "thumbnails") {
-          this.filterState = "graphics";
-          this.currentFilter = "graphics";
-          button.textContent = "Thumbnails";
-          this.filterArtwork(this.currentFilter);
-          this.artworkGrid.classList.remove("hidden");
-        } else {
-          // filterState is 'graphics'
-          this.filterState = "hidden";
-          button.textContent = "Thumbnails";
-          this.artworkGrid.classList.add("hidden");
-        }
-
-        this.updateButtonStates();
-      });
-    });
-  }
-
-  updateButtonStates() {
-    this.filterButtons.forEach((btn) => {
-      if (this.filterState !== "hidden") {
-        btn.classList.add("active");
-      } else {
-        btn.classList.remove("active");
-      }
-    });
-  }
-
-  filterArtwork(filter) {
-    // Always re-select cards to get the latest set
-    this.artworkCards = document.querySelectorAll(".artwork-card");
-    this.artworkCards.forEach((card) => {
-      const category = card.getAttribute("data-category");
-      if (category === filter) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  }
-}
+// Artwork filter functionality - Deprecated/Replaced by GraphicsCategorySlider
 
 // Poison water effect
 class WaterEffect {
@@ -316,8 +250,8 @@ class ImagePopup {
     this.popup = document.createElement("div");
     this.popup.classList.add("image-popup-overlay");
     this.popup.innerHTML = `
+            <button class="image-popup-close">&times;</button>
             <div class="image-popup-content">
-                <button class="image-popup-close">&times;</button>
                 <img src="${imageUrl}" alt="Full Image" class="image-popup-img" loading="lazy">
             </div>
         `;
@@ -356,7 +290,6 @@ class ImagePopup {
 // Initialize all interactions
 function initializeInteractions() {
   new Navigation();
-  new ArtworkFilter();
   new WaterEffect();
   new StatsCounter();
   new ImagePopup(); // Initialize the image popup

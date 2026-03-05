@@ -59,6 +59,28 @@ function populateHero(heroConfig) {
     });
   }
 
+  // Video Embed
+  const videoContainer = document.getElementById("hero-video-container");
+  if (videoContainer) {
+    if (heroConfig.videoEmbedUrl && heroConfig.videoEmbedUrl.trim() !== "") {
+      videoContainer.innerHTML = `
+        <div class="hero-video-wrapper">
+          <iframe 
+            src="${heroConfig.videoEmbedUrl}" 
+            title="Video Embed" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      `;
+      videoContainer.classList.remove("hidden");
+    } else {
+      videoContainer.innerHTML = "";
+      videoContainer.classList.add("hidden");
+    }
+  }
+
   const statsBar = document.getElementById("stats-bar");
   statsBar.innerHTML = "";
   heroConfig.stats.forEach((stat) => {
@@ -69,40 +91,91 @@ function populateHero(heroConfig) {
   if (typeof initTrustedBrands === "function") {
     initTrustedBrands(heroConfig.trustedBrands || []);
   }
+
+  // Populate creators grid
+  const creatorsGrid = document.getElementById("creators-grid");
+  if (creatorsGrid && heroConfig.creators) {
+    creatorsGrid.innerHTML = "";
+    heroConfig.creators.forEach((creator) => {
+      creatorsGrid.innerHTML += `
+        <div class="creator-card">
+          <img src="${creator.logoUrl}" alt="${creator.name}" class="creator-logo" />
+          <div class="creator-info">
+            <h4 class="creator-name">${creator.name}</h4>
+            <div class="creator-audience"><span class="creator-audience-number">${creator.audience}</span>Subs</div>
+          </div>
+        </div>
+      `;
+    });
+  }
 }
 
 function populateGraphics(graphicsConfig) {
-  const grid = document.getElementById("artwork-grid");
-  grid.innerHTML = "";
-
-  // Get all thumbnail files from assets/thumbnails directory
-  const thumbnailFiles = [];
-  try {
-    // This would typically be done server-side, but for static sites we simulate with a file list
-    // In a real implementation, we'd fetch from a server-generated list
-    // For now, we'll use the graphicsConfig as a fallback
-    thumbnailFiles.push(...graphicsConfig);
-  } catch (e) {
-    console.error("Error loading thumbnails:", e);
+  if (typeof initializeGraphicsCarousel === "function") {
+    initializeGraphicsCarousel(graphicsConfig);
   }
+}
 
-  // Create entries for each thumbnail
-  thumbnailFiles.forEach((item, index) => {
-    grid.innerHTML += `
-            <div class="artwork-card clickable" data-category="${
-              item.category
-            }" data-image-url="${item.imageUrl}">
-                <img src="${item.previewUrl}" alt="${
-      item.title
-    }" loading="lazy" class="lazyload-img">
-                <div class="artwork-category">${
-                  item.category.charAt(0).toUpperCase() + item.category.slice(1)
-                }</div>
-                <div class="artwork-overlay">
-                    <h3>${item.title}</h3>
-                    <p>${item.description || ""}</p>
-                </div>
-            </div>`;
+function populateScripting(scriptingConfig) {
+  if (typeof initializeScriptingCarousel === "function") {
+    initializeScriptingCarousel(scriptingConfig);
+  }
+}
+
+function populateSuccessStories(storiesConfig) {
+  const container = document.getElementById("success-stories-container");
+  if (!container || !storiesConfig) return;
+
+  container.innerHTML = "";
+  storiesConfig.forEach((story) => {
+    let statsHTML = "";
+    if (story.stats && story.stats.length > 0) {
+      statsHTML = `<div class="success-story-stats">
+        ${story.stats
+          .map(
+            (stat) => `
+          <div class="success-stat-item">
+            <img src="${stat.image}" alt="${stat.text}" class="success-stat-img" loading="lazy">
+            <div class="success-stat-text">${stat.text}</div>
+          </div>
+        `,
+          )
+          .join("")}
+      </div>`;
+    }
+
+    let topStatsHTML = "";
+    if (story.topStats && story.topStats.length > 0) {
+      topStatsHTML = `<div class="success-story-top-stats">
+        ${story.topStats
+          .map(
+            (stat) => `
+          <div class="success-top-stat">
+            <span class="success-top-stat-value">${stat.value}</span>
+            <span class="success-top-stat-label">${stat.label}</span>
+          </div>
+        `,
+          )
+          .join("")}
+      </div>`;
+    }
+
+    container.innerHTML += `
+      <div class="success-story-card">
+        <div class="success-story-header">
+          <img src="${story.logoUrl}" alt="${story.name} Logo" class="success-story-logo" loading="lazy">
+          <div class="success-story-header-content">
+            <div class="success-story-title">
+              <h4>${story.name}</h4>
+              <div class="success-story-genre">${story.genre}</div>
+            </div>
+          </div>
+          ${topStatsHTML}
+        </div>
+        <p class="success-story-text">${story.story}</p>
+        ${statsHTML}
+      </div>
+    `;
   });
 }
 
@@ -154,26 +227,80 @@ function populateWhyUs(whyUsConfig) {
   boxesEl.innerHTML = "";
   (whyUsConfig.comparisonBoxes || []).forEach((box) => {
     const isPro = (box.type || "").toLowerCase() === "pro";
-    const cardBorder = isPro ? "hsl(var(--primary))" : "hsl(var(--border))";
-    const titleColor = isPro ? "hsl(var(--primary))" : "hsl(var(--foreground))";
-    const glow = isPro
-      ? "0 0 20px hsl(var(--primary) / 0.3)"
-      : "var(--shadow-card)";
-
+    
     const card = document.createElement("div");
-    card.className = "card p-8";
-    card.style.borderColor = cardBorder;
-    card.style.boxShadow = glow;
+    card.className = `why-us-card ${isPro ? 'pro-card' : 'standard-card'}`;
+    
+    // Add cool icons next to points based on the card type
+    const listHtml = (box.points || []).map((p) => `
+        <li>
+            <span class="why-us-icon">
+                ${isPro 
+                    ? '<i class="fas fa-check-circle" style="color: hsl(var(--primary));"></i>' 
+                    : '<i class="fas fa-times-circle" style="color: #ef4444;"></i>'
+                }
+            </span>
+            <span class="why-us-text">${p}</span>
+        </li>
+    `).join("");
+
     card.innerHTML = `
-            <h3 class="text-2xl font-bold mb-4" style="color:${titleColor}">${
-      box.title || ""
-    }</h3>
-            <ul style="list-style: none; padding-left: 0; display: grid; gap: 0.75rem;">
-                ${(box.points || []).map((p) => `<li>${p}</li>`).join("")}
-            </ul>
-        `;
+        <div class="why-us-card-header">
+            <h3>${box.title || ""}</h3>
+            ${isPro ? '<div class="pro-badge">Our Approach</div>' : ''}
+        </div>
+        <ul class="why-us-list">
+            ${listHtml}
+        </ul>
+    `;
     boxesEl.appendChild(card);
   });
+}
+
+function populateClientWins(clientWinsConfig) {
+    if (typeof initializeClientWinsCarousel === 'function') {
+        initializeClientWinsCarousel(clientWinsConfig);
+    }
+}
+
+function populateTeam(teamConfig) {
+  const container = document.getElementById("team-container");
+  if (!container || !teamConfig || teamConfig.length === 0) return;
+
+  container.innerHTML = "";
+
+  // Helper to generate a row of members
+  const createRow = (members, isFirstRow) => {
+    let rowHtml = `<div class="team-row ${isFirstRow ? "team-row-first" : ""}">`;
+    members.forEach((member, index) => {
+      // Middle card of the first row gets the "ceo-card" class to lift it
+      const isMiddleFirstRow =
+        isFirstRow && members.length === 3 && index === 1;
+
+      rowHtml += `
+        <div class="team-member ${isMiddleFirstRow ? "ceo-card" : ""}">
+          <div class="team-member-img-wrapper">
+            <div class="team-member-img-inner">
+              <img src="${member.imageUrl}" alt="${member.name}" class="team-member-img" loading="lazy">
+            </div>
+          </div>
+          <div class="team-member-name">${member.name}</div>
+          <div class="team-member-role">${member.role}</div>
+        </div>
+      `;
+    });
+    rowHtml += `</div>`;
+    return rowHtml;
+  };
+
+  // Split into rows: 3, 3, 2 (as requested)
+  const row1 = teamConfig.slice(0, 3);
+  const row2 = teamConfig.slice(3, 6);
+  const row3 = teamConfig.slice(6, 8);
+
+  if (row1.length > 0) container.innerHTML += createRow(row1, true);
+  if (row2.length > 0) container.innerHTML += createRow(row2, false);
+  if (row3.length > 0) container.innerHTML += createRow(row3, false);
 }
 
 function populateContact(contactConfig) {
@@ -249,22 +376,19 @@ function populateContact(contactConfig) {
 
   socialLinks.innerHTML = socialLinksHTML;
 
-  document.getElementById(
-    "footer-year"
-  ).textContent = `© ${contactConfig.copyrightYear} All rights reserved`;
+  document.getElementById("footer-year").textContent = contactConfig.copyrightYear || new Date().getFullYear();
 
   // Footer logo link + image from config
   const footerLogoLink = document.getElementById("footer-logo-link");
   const footerLogoImg = document.getElementById("footer-logo-img");
   if (footerLogoLink && footerLogoImg) {
-    footerLogoLink.href =
-      "https://cdn.discordapp.com/attachments/1289108911583924240/1416850625127514364/ny_3.png?ex=68cc4cf8&is=68cafb78&hm=b8fd2a65313acf01d3af6a71d88c2f43d36149a91da31eea9036de2cb65e1d5f&";
+    footerLogoLink.href = "/";
     footerLogoImg.src =
       contactConfig && contactConfig.avatarUrl
         ? contactConfig.avatarUrl
         : typeof siteLogoUrl !== "undefined"
-        ? siteLogoUrl
-        : "";
+          ? siteLogoUrl
+          : "";
     // Prefer site logo from config if available
     try {
       const rootConfigLogo =
@@ -276,13 +400,7 @@ function populateContact(contactConfig) {
 }
 
 function populateShortForm(shortFormConfig) {
-  const slider = document.getElementById("shortFormSlider");
-  slider.innerHTML = "";
-  shortFormConfig.forEach((item) => {
-    slider.innerHTML += `
-            <div class="carousel-item vertical">
-                <iframe src="${item.src}" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="iframe-overlay"></div>
-            </div>`;
-  });
+  if (typeof initializeShortFormCarousel === "function") {
+    initializeShortFormCarousel(shortFormConfig);
+  }
 }

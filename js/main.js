@@ -12,16 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
             populateNavigation(config);
             populateHero(config.hero);
             populateGraphics(config.graphics);
+            populateScripting(config.scriptingData);
+            if (config.successStories) {
+                populateSuccessStories(config.successStories);
+            }
+            if (config.clientWins) {
+                populateClientWins(config.clientWins);
+            }
             populateTestimonials(config.testimonials);
             populateFaq(config.faq);
             populateWhyUs(config.whyUs);
+            if (config.team) {
+                populateTeam(config.team);
+            }
             populateContact(config.contact);
             populateShortForm(config.shortFormData);
-
-            // Initialize artwork filter after graphics are populated
-            if (document.getElementById('artwork-grid')) {
-                new ArtworkFilter();
-            }
 
             // Initialize all the dynamic components
             initializePage(config);

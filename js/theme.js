@@ -8,6 +8,14 @@ function applyTheme(theme) {
             const cssVarName = key.replace(/([A-Z])/g, '-$1').toLowerCase();
             root.style.setProperty(`--${cssVarName}`, value);
         });
+
+        // Explicitly set dependent glass variables to prevent race conditions or browser bugs on refresh
+        if (theme.colors.card) {
+            root.style.setProperty('--glass-bg', `hsl(${theme.colors.card} / 0.4)`);
+        }
+        if (theme.colors.border) {
+            root.style.setProperty('--glass-border', `hsl(${theme.colors.border} / 0.5)`);
+        }
     }
     
     // Apply typography

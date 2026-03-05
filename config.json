@@ -38,15 +38,40 @@
     }
   },
   "navigation": [
-    { "href": "#services", "text": "Services" },
-    { "href": "#graphics", "text": "Graphics" },
-    { "href": "#reviews", "text": "Reviews" },
-    { "href": "#faq", "text": "FAQ" }
+    {
+      "href": "#services",
+      "text": "Videos"
+    },
+    {
+      "href": "#graphics",
+      "text": "Thumbnails"
+    },
+    {
+      "href": "#scripting",
+      "text": "Scripting"
+    },
+    {
+      "href": "#reviews",
+      "text": "Reviews"
+    },
+    {
+      "href": "#packages",
+      "text": "Packages"
+    },
+    {
+      "href": "#faq",
+      "text": "FAQ"
+    },
+    {
+      "href": "#about",
+      "text": "About"
+    }
   ],
   "hero": {
-    "title": "Editing That ",
-    "subtitle": "Converts",
+    "title": "Edit That",
+    "subtitle": "Works",
     "description": "Designed to boost engagement, maximize ROI, and help you scale your brand faster.",
+    "videoEmbedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "tools": [
       {
         "label": "Pr",
@@ -80,9 +105,60 @@
       }
     ],
     "stats": [
-      { "number": "300+", "label": "Videos Edited" },
-      { "number": "50M+", "label": "Views Generated" },
-      { "number": "7+", "label": "Years of Experience" }
+      {
+        "number": " 500+",
+        "label": "Videos Edited"
+      },
+      {
+        "number": "100M+",
+        "label": "Views Generated"
+      },
+      {
+        "number": "4+",
+        "label": "Years of Experience"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Lana's Life",
+        "audience": "9M ",
+        "logoUrl": "https://ui-avatars.com/api/?name=LL&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "Russo Plays",
+        "audience": "3M ",
+        "logoUrl": "https://ui-avatars.com/api/?name=RP&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "CLASSIFIED SPONGE",
+        "audience": "1.3M ",
+        "logoUrl": "https://ui-avatars.com/api/?name=DP&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "KINGOPOLY",
+        "audience": "680K ",
+        "logoUrl": "https://ui-avatars.com/api/?name=AR&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "TRUNKS PLAYS",
+        "audience": "270K ",
+        "logoUrl": "https://ui-avatars.com/api/?name=YT&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "Fiveayy",
+        "audience": "360K ",
+        "logoUrl": "https://ui-avatars.com/api/?name=MR&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "Davidfn",
+        "audience": "130K ",
+        "logoUrl": "https://ui-avatars.com/api/?name=RT&background=1E1E1E&color=10b981&size=128"
+      },
+      {
+        "name": "SIDEQUEST GAMES",
+        "audience": "50K ",
+        "logoUrl": "https://ui-avatars.com/api/?name=RT&background=1E1E1E&color=10b981&size=128"
+      }
     ],
     "trustedBrands": [
       {
@@ -412,7 +488,10 @@
       "category": "Others",
       "src": "https://www.youtube.com/embed/ej-XP3oO-TA"
     },
-    { "category": "Others", "src": "https://www.youtube.com/embed/9UX5DlHzaBM" }
+    {
+      "category": "Others",
+      "src": "https://www.youtube.com/embed/9UX5DlHzaBM"
+    }
   ],
   "whyUs": {
     "title": "Why Choose Us?",
@@ -443,21 +522,92 @@
     ]
   },
   "shortFormData": [
-    { "src": "https://youtube.com/embed/o79IAPXy1p0?si=RHBec6iB8IwUUYkq" },
-    { "src": "https://youtube.com/embed/4IrIsykjupE?si=wsJZFMGOo9iH01mj" },
-    { "src": "https://youtube.com/embed/yHKz5cZKZoI?si=OFZJhjDnzWguBSS2" },
-    { "src": "https://youtube.com/embed/D2Be1XgsJLI?feature=share" },
-    { "src": "https://youtube.com/embed/QHcJsMO60oI?feature=share" },
-    { "src": "https://youtube.com/embed/izgNw8-zEDc?feature=share" },
-    { "src": "https://youtube.com/embed/Egc8XKJcJqY?feature=share" },
-    { "src": "https://youtube.com/embed/ulcTym67Sxg?feature=share" },
-    { "src": "https://youtube.com/embed/Egc8XKJcJqY?feature=share" },
-    { "src": "https://youtube.com/embed/lhbm2bicoDQ?feature=share" },
-    { "src": "https://youtube.com/embed/QFwG9Tr1QFY?feature=share" },
-    { "src": "https://youtube.com/embed/XeTdedFtCUU?feature=share" },
-    { "src": "https://youtube.com/embed/UhKT9G2cF8Q?feature=share" },
-    { "src": "https://youtube.com/embed/b6aJxv-17A0?feature=share" },
-    { "src": "https://youtube.com/embed/8A_zkvjOIeM?feature=share" }
+    {
+      "src": "https://youtube.com/embed/o79IAPXy1p0?si=RHBec6iB8IwUUYkq",
+      "category": "Gaming"
+    },
+    {
+      "src": "https://youtube.com/embed/4IrIsykjupE?si=wsJZFMGOo9iH01mj",
+      "category": "UGC"
+    },
+    {
+      "src": "https://youtube.com/embed/yHKz5cZKZoI?si=OFZJhjDnzWguBSS2",
+      "category": "IRL"
+    },
+    {
+      "src": "https://youtube.com/embed/D2Be1XgsJLI?feature=share",
+      "category": "Talking Head"
+    },
+    {
+      "src": "https://youtube.com/embed/QHcJsMO60oI?feature=share",
+      "category": "Ads"
+    },
+    {
+      "src": "https://youtube.com/embed/izgNw8-zEDc?feature=share",
+      "category": "Crypto"
+    },
+    {
+      "src": "https://youtube.com/embed/Egc8XKJcJqY?feature=share",
+      "category": "TikToks"
+    },
+    {
+      "src": "https://youtube.com/embed/ulcTym67Sxg?feature=share",
+      "category": "Documentary"
+    },
+    {
+      "src": "https://youtube.com/embed/Egc8XKJcJqY?feature=share",
+      "category": "Highlights"
+    },
+    {
+      "src": "https://youtube.com/embed/lhbm2bicoDQ?feature=share",
+      "category": "Others"
+    },
+    {
+      "src": "https://youtube.com/embed/QFwG9Tr1QFY?feature=share",
+      "category": "Gaming"
+    },
+    {
+      "src": "https://youtube.com/embed/XeTdedFtCUU?feature=share",
+      "category": "UGC"
+    },
+    {
+      "src": "https://youtube.com/embed/UhKT9G2cF8Q?feature=share",
+      "category": "Talking Head"
+    },
+    {
+      "src": "https://youtube.com/embed/b6aJxv-17A0?feature=share",
+      "category": "Ads"
+    },
+    {
+      "src": "https://youtube.com/embed/8A_zkvjOIeM?feature=share",
+      "category": "Crypto"
+    }
+  ],
+  "scriptingData": [
+    {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "category": "Documentary"
+    },
+    {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "category": "Documentary"
+    },
+    {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "category": "Gaming"
+    },
+    {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "category": "Gaming"
+    },
+    {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "category": "Storytelling"
+    },
+    {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "category": "Storytelling"
+    }
   ],
   "graphics": [
     {
@@ -731,6 +881,85 @@
       "previewUrl": "https://cdn.nystudios.org/thumbnails/oct6_preview.jpg"
     }
   ],
+  "clientWins": [
+    {
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop"
+    },
+    {
+      "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop"
+    },
+    {
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop"
+    },
+    {
+      "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop"
+    },
+    {
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop"
+    }
+  ],
+  "successStories": [
+    {
+      "name": "Classified Sponge",
+      "genre": "Gaming / Entertainment",
+      "logoUrl": "https://cdn.nystudios.org/trusted-brands/classified-sponge.jpg",
+      "story": "Since teaming up with NY Studios, our content quality has skyrocketed. They truly understand pacing, storytelling, and audience retention, taking our videos to the next level. The impact was immediate, and their expertise has been an invaluable asset to our channel's growth.",
+      "topStats": [
+        {
+          "value": "1.22M",
+          "label": "Subscribers"
+        },
+        {
+          "value": "50M+",
+          "label": "Views Generated"
+        }
+      ],
+      "stats": [
+        {
+          "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop",
+          "text": "Multiple Viral Video Hits"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+          "text": "Before / After Comparison"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+          "text": "Channel Analytics"
+        }
+      ]
+    },
+    {
+      "name": "kinGOPoLY",
+      "genre": "Gaming",
+      "logoUrl": "https://cdn.nystudios.org/trusted-brands/KinGopoly.jpg",
+      "story": "Working with NY Studios completely transformed how our videos look and feel. The fast turnaround times, attention to detail, and ability to perfectly match our style have resulted in significantly higher viewership and engagement across the board.",
+      "topStats": [
+        {
+          "value": "672K",
+          "label": "Subscribers"
+        },
+        {
+          "value": "20M+",
+          "label": "Views Generated"
+        }
+      ],
+      "stats": [
+        {
+          "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop",
+          "text": "Multiple Viral Video Hits"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+          "text": "Before / After Comparison"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+          "text": "Channel Analytics"
+        }
+      ]
+    }
+  ],
   "testimonials": [
     {
       "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!",
@@ -933,6 +1162,48 @@
     {
       "question": "How can I order your services?",
       "answer": "The best way is to email us directly—that’s our most reliable contact method. You can also reach out via Twitter or Instagram if that’s easier for you. Once we receive your message, we’ll get back to you as soon as possible to discuss your project."
+    }
+  ],
+  "team": [
+    {
+      "name": "DN DIHAN",
+      "role": "CHIEF EXECUTIVE EDITOR, GAMING & YTA DEPT",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "LABIB | THEVINZO",
+      "role": "FOUNDER & CEO",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "FAIAD MAHADI",
+      "role": "CHIEF EDITOR, BUSSINESS & TECH DEPT.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "MOSTAK AHMED",
+      "role": "MANAGER",
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "HAJBIR RAHAMAN",
+      "role": "THUMBNAIL ARTIST",
+      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "SHAFIOR",
+      "role": "EDITOR",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "TANSNIM EFAD",
+      "role": "CHANNEL ANALYST",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop"
+    },
+    {
+      "name": "ARIF",
+      "role": "SCRIPT WRITER",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop"
     }
   ],
   "contact": {

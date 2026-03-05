@@ -1,0 +1,13 @@
+.git
+.gitignore
+.vscode
+node_modules
+*.md
+Dockerfile
+.dockerignore
+docker-compose*.yml
+.env
+.env.*
+*.log
+tmp_vinzo.html
+scripts

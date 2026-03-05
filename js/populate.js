@@ -304,47 +304,46 @@ function populateTeam(teamConfig) {
 }
 
 function populateContact(contactConfig) {
-  document.getElementById("founder-name").textContent = contactConfig.name;
-  document.getElementById("founder-role").textContent = contactConfig.role;
-  const bioEl = document.getElementById("founder-bio");
-  const fullBio = contactConfig.bio || "";
-  const bioHtml = (fullBio || "").replace(/\n/g, "<br>");
-  bioEl.innerHTML = bioHtml;
-
-  // Always add Read more / Show less toggle (default collapsed)
-  bioEl.classList.add("collapsed");
-  let isCollapsed = true;
-  const toggleBtn = document.createElement("button");
-  toggleBtn.type = "button";
-  toggleBtn.className = "bio-toggle";
-  toggleBtn.textContent = "Read more";
-  toggleBtn.addEventListener("click", () => {
-    isCollapsed = !isCollapsed;
-    bioEl.classList.toggle("collapsed", isCollapsed);
-    toggleBtn.textContent = isCollapsed ? "Read more" : "Show less";
-  });
-  bioEl.after(toggleBtn);
-
-  // --- CHANGE START: Populate founder avatar ---
-  const avatarContainer = document.getElementById("founder-avatar");
-  if (contactConfig.avatarUrl && contactConfig.avatarUrl.trim() !== "") {
-    // If an avatar URL is provided, use it
-    avatarContainer.style.background = "none"; // Remove gradient background
-    avatarContainer.innerHTML = `<img src="${contactConfig.avatarUrl}" alt="${contactConfig.name}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">`;
-  } else {
-    // Fallback to the first initial of the name
-    const initial = contactConfig.name
-      ? contactConfig.name.charAt(0).toUpperCase()
-      : "";
-    avatarContainer.textContent = initial;
-  }
-  // --- CHANGE END ---
-
-  const socialLinks = document.getElementById("social-links");
-  socialLinks.innerHTML = "";
-
-  // Build all social links HTML at once
-  const socialLinksHTML = contactConfig.socials
+  if (!contactConfig) return;
+  const founderNameEl = document.getElementById("founder-name");
+  if (founderNameEl) {
+    founderNameEl.textContent = contactConfig.name;
+    const founderRoleEl = document.getElementById("founder-role");
+    if (founderRoleEl) founderRoleEl.textContent = contactConfig.role;
+    const bioEl = document.getElementById("founder-bio");
+    if (bioEl) {
+      const fullBio = contactConfig.bio || "";
+      const bioHtml = (fullBio || "").replace(/\n/g, "<br>");
+      bioEl.innerHTML = bioHtml;
+      bioEl.classList.add("collapsed");
+      let isCollapsed = true;
+      const toggleBtn = document.createElement("button");
+      toggleBtn.type = "button";
+      toggleBtn.className = "bio-toggle";
+      toggleBtn.textContent = "Read more";
+      toggleBtn.addEventListener("click", () => {
+        isCollapsed = !isCollapsed;
+        bioEl.classList.toggle("collapsed", isCollapsed);
+        toggleBtn.textContent = isCollapsed ? "Read more" : "Show less";
+      });
+      bioEl.after(toggleBtn);
+    }
+    const avatarContainer = document.getElementById("founder-avatar");
+    if (avatarContainer) {
+      if (contactConfig.avatarUrl && contactConfig.avatarUrl.trim() !== "") {
+        avatarContainer.style.background = "none";
+        avatarContainer.innerHTML = `<img src="${contactConfig.avatarUrl}" alt="${contactConfig.name}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">`;
+      } else {
+        const initial = contactConfig.name
+          ? contactConfig.name.charAt(0).toUpperCase()
+          : "";
+        avatarContainer.textContent = initial;
+      }
+    }
+    const socialLinks = document.getElementById("social-links");
+    if (socialLinks && contactConfig.socials) {
+      socialLinks.innerHTML = "";
+      const socialLinksHTML = contactConfig.socials
     .map((item) => {
       // Format URL for display - show domain and path
       let displayUrl = item.url;
@@ -373,10 +372,12 @@ function populateContact(contactConfig) {
         </a>`;
     })
     .join("");
+      socialLinks.innerHTML = socialLinksHTML;
+    }
+  }
 
-  socialLinks.innerHTML = socialLinksHTML;
-
-  document.getElementById("footer-year").textContent = contactConfig.copyrightYear || new Date().getFullYear();
+  const footerYearEl = document.getElementById("footer-year");
+  if (footerYearEl) footerYearEl.textContent = contactConfig.copyrightYear || new Date().getFullYear();
 
   // Footer logo link + image from config
   const footerLogoLink = document.getElementById("footer-logo-link");
@@ -400,7 +401,7 @@ function populateContact(contactConfig) {
 }
 
 function populateShortForm(shortFormConfig) {
-  if (typeof initializeShortFormCarousel === "function") {
+  if (typeof initializeShortFormCarousel === "function" && shortFormConfig) {
     initializeShortFormCarousel(shortFormConfig);
   }
 }

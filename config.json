@@ -51,20 +51,12 @@
       "text": "Scripting"
     },
     {
-      "href": "#reviews",
-      "text": "Reviews"
-    },
-    {
-      "href": "#packages",
-      "text": "Packages"
+      "href": "#success-stories",
+      "text": "Results"
     },
     {
       "href": "#faq",
       "text": "FAQ"
-    },
-    {
-      "href": "#about",
-      "text": "About"
     }
   ],
   "hero": {
@@ -1237,7 +1229,6 @@
         "iconClass": "fab fa-twitter",
         "url": "https://x.com/nystudios1"
       }
-    ],
-    "copyrightYear": "2025"
+    ]
   }
 }

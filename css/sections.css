@@ -769,6 +769,15 @@
 .footer-col {
   display: flex;
   flex-direction: column;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.footer-col.footer-col--highlight {
+  background-color: hsl(var(--primary) / 0.08);
+  box-shadow: 0 0 0 1px hsl(var(--primary) / 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  margin: -16px;
 }
 
 .footer-logo {

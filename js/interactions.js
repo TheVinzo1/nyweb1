@@ -287,12 +287,30 @@ class ImagePopup {
   }
 }
 
+// Footer: highlight Get in Touch when Contact link is clicked
+function setupFooterContactHighlight() {
+  const footer = document.querySelector(".site-footer");
+  const getInTouch = document.getElementById("footer-get-in-touch");
+  if (!footer || !getInTouch) return;
+
+  footer.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href="#contact"]');
+    if (!link) return;
+    getInTouch.classList.add("footer-col--highlight");
+    clearTimeout(getInTouch._highlightTimeout);
+    getInTouch._highlightTimeout = setTimeout(() => {
+      getInTouch.classList.remove("footer-col--highlight");
+    }, 2500);
+  });
+}
+
 // Initialize all interactions
 function initializeInteractions() {
   new Navigation();
   new WaterEffect();
   new StatsCounter();
   new ImagePopup(); // Initialize the image popup
+  setupFooterContactHighlight();
 }
 
 // Make toggleFAQ globally available for onclick attributes

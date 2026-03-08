@@ -1229,6 +1229,10 @@
         "iconClass": "fab fa-twitter",
         "url": "https://x.com/nystudios1"
       }
+    ],
+    "legal": [
+      { "text": "Terms", "href": "#" },
+      { "text": "Privacy", "href": "#" }
     ]
   }
 }

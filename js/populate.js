@@ -379,6 +379,16 @@ function populateContact(contactConfig) {
   const footerYearEl = document.getElementById("footer-year");
   if (footerYearEl) footerYearEl.textContent = contactConfig.copyrightYear || new Date().getFullYear();
 
+  const footerLegalEl = document.getElementById("footer-legal-links");
+  if (footerLegalEl && contactConfig.legal && contactConfig.legal.length > 0) {
+    footerLegalEl.innerHTML = contactConfig.legal
+      .map(
+        (item) =>
+          `<li><a href="${item.href || "#"}">${item.text || ""}</a></li>`
+      )
+      .join("");
+  }
+
   // Footer logo link + image from config
   const footerLogoLink = document.getElementById("footer-logo-link");
   const footerLogoImg = document.getElementById("footer-logo-img");

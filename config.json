@@ -170,21 +170,18 @@
         "logoUrl": "https://cdn.nystudios.org/trusted-brands/KinGopoly.jpg",
         "ytUrl": "https://www.youtube.com/@kinGOPoLY",
         "subs": "676K Subs"
-        
       },
       {
         "name": "Lana's Life",
-        "logoUrl": "https://cdn.nystudios.org/trusted-brands/KinGopoly.jpg",
+        "logoUrl": "https://cdn.nystudios.org/trusted-brands/lanaslife.jpg",
         "ytUrl": "https://www.youtube.com/@Lanaslifeee",
         "subs": "9M Subs"
-        
       },
       {
         "name": "Russo Plays",
-        "logoUrl": "https://cdn.nystudios.org/trusted-brands/KinGopoly.jpg",
+        "logoUrl": "https://cdn.nystudios.org/trusted-brands/russoplays.jpg",
         "ytUrl": "https://www.youtube.com/@rusoplaysgames",
-        "subs": "3MK Subs"
-        
+        "subs": "3M Subs"
       },
       {
         "name": "fiveay",
@@ -502,10 +499,6 @@
       "category": "Gaming"
     },
     {
-      "src": "https://youtube.com/embed/vKbTz0ybk7g?si=h6zWL2gL5JqK6ps9",
-      "category": "Gaming"
-    },
-    {
       "src": "https://youtube.com/embed/FeJDv2wYhLY?si=NmAONtBRKHZODO87",
       "category": "Gaming"
     },
@@ -531,11 +524,11 @@
     },
     {
       "src": "https://youtube.com/embed/lhhreqrIOlI",
-      "category": "Character Styled" 
+      "category": "Character Styled"
     },
     {
       "src": "https://youtube.com/embed/Y7TWjGG51xc",
-      "category": "Character Styled" 
+      "category": "Character Styled"
     },
     {
       "src": "https://youtube.com/embed/57_i846W0kQ?si=_h3VwVZmxSHtE2f0",
@@ -890,15 +883,15 @@
       ],
       "stats": [
         {
-          "image": "https://cdn.nystudios.org/success-story/trunk1.png",
+          "image": "https://cdn.nystudios.org/success-story/trunks1.png",
           "text": "Multiple Viral Video Hits"
         },
         {
-          "image": "https://cdn.nystudios.org/success-story/trunk2.png",
+          "image": "https://cdn.nystudios.org/success-story/trunks2.png",
           "text": "Before / After Comparison"
         },
         {
-          "image": "https://cdn.nystudios.org/success-story/trunk3.png",
+          "image": "https://cdn.nystudios.org/success-story/trunks3.png",
           "text": "Channel Analytics"
         }
       ]
@@ -910,11 +903,11 @@
       "story": "If you're looking for long-term results, we've got you covered.Take a look at this channel. We've been working together for nearly a year and a half. We started from zero. This is where the channel stands today.",
       "topStats": [
         {
-          "value": "672K",
+          "value": "23.7K",
           "label": "Subscribers"
         },
         {
-          "value": "20M+",
+          "value": "9M+",
           "label": "Views Generated"
         }
       ],
@@ -1213,8 +1206,14 @@
       }
     ],
     "legal": [
-      { "text": "Terms", "href": "#" },
-      { "text": "Privacy", "href": "#" }
+      {
+        "text": "Terms",
+        "href": "#"
+      },
+      {
+        "text": "Privacy",
+        "href": "#"
+      }
     ]
   }
 }

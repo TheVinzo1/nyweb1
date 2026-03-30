@@ -10,6 +10,6 @@ echo "Stopping and removing containers..."
 docker compose down
 
 echo "Starting containers..."
-docker compose up -d
+PORT=52430 docker compose up -d
 
 echo "Deployment complete!"

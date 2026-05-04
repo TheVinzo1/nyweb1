@@ -60,10 +60,10 @@
     }
   ],
   "hero": {
-    "title": "Edit That",
-    "subtitle": "Works",
-    "description": "Designed to boost engagement, maximize ROI, and help you scale your brand faster.",
-    "videoEmbedUrl": "https://www.youtube.com/embed/Hfm94aHAbYQ?si=W5uro8LeARsqVIbY",
+  "title": "Video Editing",
+  "subtitle": "Services That Work",
+  "description": "Designed to boost engagement, maximize ROI, and help you scale your brand faster with professional video editing services.",
+  "videoEmbedUrl": "https://www.youtube.com/embed/Hfm94aHAbYQ?si=W5uro8LeARsqVIbY",
     "tools": [
       {
         "label": "Pr",

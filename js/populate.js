@@ -1,7 +1,7 @@
 // Functions to populate HTML elements with data from config.json
 
 function populateNavigation(config) {
-  document.title = `${config.siteTitle} - Professional Video Editing & Content Creation`;
+  document.title = "Video Editing Services for Creators & Brands | NY Studios";
   const logoLink = document.getElementById("site-logo-link");
   // Check if both the URL and Height properties exist
   if (
